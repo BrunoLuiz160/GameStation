@@ -45,6 +45,70 @@ VALUES
 ('Cuphead', 36.99, 'Plataforma e desenho animado', 18),
 ('Dead by Daylight', 59.90, 'Terror multijogador', 19),
 ('No Mans Sky', 129.90, 'Exploracao espacial', 20);
+----------------------------------------------------------------------------
+
+INSERT INTO Categoria (nome, descricao)
+VALUES
+('Acao', 'Jogos com combates, reflexos e desafios'),
+('Aventura', 'Jogos focados em exploracao e descobertas'),
+('RPG', 'Jogos com evolucao de personagens e progressao'),
+('Mundo Aberto', 'Jogos com liberdade para explorar grandes mapas'),
+('Sobrevivencia', 'Jogos que envolvem sobrevivencia e gerenciamento de recursos'),
+('Construcao', 'Jogos focados em construir, criar ou modificar estruturas'),
+('Simulacao', 'Jogos que simulam atividades ou experiencias'),
+('Terror', 'Jogos com suspense, medo e elementos assustadores'),
+('Corrida', 'Jogos focados em corridas e velocidade'),
+('Estrategia', 'Jogos que exigem planejamento e tomada de decisoes'),
+('Plataforma', 'Jogos com saltos, obstaculos e desafios de movimento'),
+('Multijogador', 'Jogos com modos para varios jogadores');
+--------------------------------------------------------------------------------------------------
+
+INSERT INTO JogoCategoria (id_jogo, id_categoria)
+SELECT J.id_jogo, C.id_categoria
+FROM Jogo J
+CROSS JOIN Categoria C
+WHERE
+    (J.titulo = 'Minecraft'
+        AND C.nome IN ('Aventura', 'Sobrevivencia', 'Construcao', 'Mundo Aberto'))
+ OR (J.titulo = 'The Witcher 3: Wild Hunt'
+        AND C.nome IN ('RPG', 'Acao', 'Aventura', 'Mundo Aberto'))
+ OR (J.titulo = 'Stardew Valley'
+        AND C.nome IN ('Simulacao', 'Aventura', 'Construcao'))
+ OR (J.titulo = 'Elden Ring'
+        AND C.nome IN ('RPG', 'Acao', 'Aventura'))
+ OR (J.titulo = 'Resident Evil 4'
+        AND C.nome IN ('Acao', 'Terror', 'Aventura'))
+ OR (J.titulo = 'Cyberpunk 2077'
+        AND C.nome IN ('RPG', 'Acao', 'Mundo Aberto'))
+ OR (J.titulo = 'Red Dead Redemption 2'
+        AND C.nome IN ('Acao', 'Aventura', 'Mundo Aberto'))
+ OR (J.titulo = 'GTA V'
+        AND C.nome IN ('Acao', 'Aventura', 'Mundo Aberto', 'Multijogador'))
+ OR (J.titulo = 'Terraria'
+        AND C.nome IN ('Aventura', 'Sobrevivencia', 'Construcao', 'Acao'))
+ OR (J.titulo = 'Hollow Knight'
+        AND C.nome IN ('Acao', 'Aventura', 'Plataforma'))
+ OR (J.titulo = 'God of War'
+        AND C.nome IN ('Acao', 'Aventura'))
+ OR (J.titulo = 'Hades'
+        AND C.nome IN ('Acao', 'RPG', 'Aventura'))
+ OR (J.titulo = 'Dark Souls III'
+        AND C.nome IN ('RPG', 'Acao', 'Aventura'))
+ OR (J.titulo = 'Forza Horizon 5'
+        AND C.nome IN ('Corrida', 'Mundo Aberto', 'Multijogador'))
+ OR (J.titulo = 'The Sims 4'
+        AND C.nome IN ('Simulacao', 'Estrategia'))
+ OR (J.titulo = 'Palworld'
+        AND C.nome IN ('Sobrevivencia', 'Acao', 'Aventura', 'Construcao', 'Multijogador'))
+ OR (J.titulo = 'Baldurs Gate 3'
+        AND C.nome IN ('RPG', 'Aventura', 'Estrategia'))
+ OR (J.titulo = 'Cuphead'
+        AND C.nome IN ('Acao', 'Plataforma'))
+ OR (J.titulo = 'Dead by Daylight'
+        AND C.nome IN ('Terror', 'Acao', 'Multijogador'))
+ OR (J.titulo = 'No Mans Sky'
+        AND C.nome IN ('Aventura', 'Sobrevivencia', 'Mundo Aberto', 'Construcao'));
+
 
 
 
