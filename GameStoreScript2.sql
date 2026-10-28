@@ -22,6 +22,33 @@ FROM Usuario
 ORDER BY id_usuario;
 
 
+USE GameStation;
+
+INSERT INTO Pedido (id_usuario, valor_total, status)
+VALUES
+(1, 99.90, 'Pago'),
+(2, 79.90, 'Pago'),
+(3, 24.99, 'Pendente'),
+(4, 229.90, 'Pago'),
+(5, 169.90, 'Pendente'),
+(6, 149.90, 'Pago'),
+(7, 199.90, 'Pago'),
+(8, 19.90, 'Pendente'),
+(9, 73.99, 'Pago'),
+(10, 249.90, 'Pendente');
+
+SELECT
+    P.id_pedido,
+    U.nome AS usuario,
+    P.data_pedido,
+    P.valor_total,
+    P.status
+FROM Pedido P
+INNER JOIN Usuario U
+    ON P.id_usuario = U.id_usuario
+ORDER BY P.id_pedido;
+
+
 
 USE GameStation;
 
