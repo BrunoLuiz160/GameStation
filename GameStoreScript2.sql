@@ -1,3 +1,55 @@
+
+USE GameStation;
+
+INSERT INTO Desenvolvedora (nome, pais)
+VALUES
+('Mojang Studios', 'Suecia'),
+('CD Projekt Red', 'Polonia'),
+('ConcernedApe', 'Estados Unidos'),
+('FromSoftware', 'Japao'),
+('Capcom', 'Japao'),
+('Rockstar Games', 'Estados Unidos'),
+('Re-Logic', 'Estados Unidos'),
+('Team Cherry', 'Australia'),
+('Santa Monica Studio', 'Estados Unidos'),
+('Supergiant Games', 'Estados Unidos'),
+('Playground Games', 'Reino Unido'),
+('Maxis', 'Estados Unidos'),
+('Pocketpair', 'Japao'),
+('Larian Studios', 'Belgica'),
+('Studio MDHR', 'Canada'),
+('Behaviour Interactive', 'Canada'),
+('Hello Games', 'Reino Unido');
+
+----------------------------------------------------------------------------
+INSERT INTO Jogo
+(titulo, preco, descricao, id_desenvolvedora)
+VALUES
+('Minecraft', 99.90, 'Construcao e sobrevivencia', 1),
+('The Witcher 3: Wild Hunt', 79.90, 'RPG de fantasia medieval', 2),
+('Stardew Valley', 24.99, 'Simulacao de fazenda', 3),
+('Elden Ring', 229.90, 'RPG de acao e fantasia', 4),
+('Resident Evil 4', 169.90, 'Terror e sobrevivencia', 5),
+('Cyberpunk 2077', 149.90, 'RPG futurista de mundo aberto', 6),
+('Red Dead Redemption 2', 199.90, 'Acao no Velho Oeste', 7),
+('GTA V', 99.90, 'Acao em mundo aberto', 8),
+('Terraria', 19.90, 'Aventura e construcao em 2D', 9),
+('Hollow Knight', 46.99, 'Metroidvania de aventura', 10),
+('God of War', 199.90, 'Acao e mitologia', 11),
+('Hades', 73.99, 'Roguelike de acao', 12),
+('Dark Souls III', 159.90, 'RPG de acao desafiador', 13),
+('Forza Horizon 5', 249.90, 'Corrida em mundo aberto', 14),
+('The Sims 4', 0.00, 'Simulacao de vida', 15),
+('Palworld', 88.90, 'Sobrevivencia e criaturas', 16),
+('Baldurs Gate 3', 199.90, 'RPG de fantasia', 17),
+('Cuphead', 36.99, 'Plataforma e desenho animado', 18),
+('Dead by Daylight', 59.90, 'Terror multijogador', 19),
+('No Mans Sky', 129.90, 'Exploracao espacial', 20);
+
+
+
+
+
 -- script 1
 
 USE GameStation;
