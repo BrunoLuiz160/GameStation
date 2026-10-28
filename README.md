@@ -1,18 +1,18 @@
-# GameStore — Banco de Dados
+#GameStore — Banco de Dados
 
 Projeto acadêmico de banco de dados relacional para uma loja digital de jogos, inspirado em plataformas como Steam, PlayStation Store e Xbox Store.
 
-## Objetivo
+##Objetivo
 
 Desenvolver um banco de dados utilizando MySQL para gerenciar jogos, desenvolvedoras, categorias, usuários, pedidos, pagamentos, bibliotecas digitais e avaliações.
 
-## Tecnologias
+##Tecnologias
 
 - **MySQL Server:** gerenciamento do banco de dados.
 - **MySQL Workbench:** criação e execução dos comandos SQL.
 - **SQL:** consultas e manipulação dos dados.
 
-## Estrutura do banco
+##Estrutura do banco
 
 O banco `GameStore` possui 10 tabelas:
 
@@ -29,7 +29,7 @@ O banco `GameStore` possui 10 tabelas:
 | `Biblioteca` | Jogos adquiridos pelos usuários. |
 | `Avaliacao` | Notas e comentários dos jogos. |
 
-## 🔗 Relacionamentos
+##Relacionamentos
 
 - Uma desenvolvedora pode possuir vários jogos.
 - Jogos podem pertencer a várias categorias.
@@ -40,7 +40,7 @@ O banco `GameStore` possui 10 tabelas:
 
 Os relacionamentos utilizam chaves primárias (`PRIMARY KEY`) e estrangeiras (`FOREIGN KEY`).
 
-## Scripts SQL
+##Scripts SQL
 
 O projeto possui 10 scripts independentes:
 
@@ -55,7 +55,7 @@ O projeto possui 10 scripts independentes:
 9. `09_criar_view_executiva.sql` — criação da View `vw_painel_executivo`.
 10. `10_consultar_view_executiva.sql` — consulta dos indicadores da View.
 
-## Como executar
+##Como executar
 
 1. Abra o MySQL Workbench e conecte-se ao servidor.
 2. Selecione o banco com `USE GameStore;`.
@@ -65,17 +65,17 @@ O projeto possui 10 scripts independentes:
 
 **Atenção:** os scripts de atualização e exclusão modificam os dados existentes. Execute-os com cuidado.
 
-## View executiva
+##View executiva
 
 A View `vw_painel_executivo` apresenta indicadores gerais do sistema, incluindo quantidade de jogos, desenvolvedoras, categorias, usuários e pedidos, além do preço médio dos jogos e do valor total registrado nos pedidos.
 
-## Informações acadêmicas
+##Informações acadêmicas
 
 - **Curso:** Análise e Desenvolvimento de Sistemas (ADS)
 - **Disciplina:** Modelagem de Banco de Dados
 - **Integrantes:** *Preencher com os nomes da equipe*
 - **Instituição:** *Preencher com o nome da instituição*
 
-## Conclusão
+##Conclusão
 
 O projeto demonstra a aplicação de conceitos de bancos de dados relacionais, relacionamentos entre tabelas, consultas SQL, funções de agregação, manipulação de dados e criação de relatórios utilizando Views.
