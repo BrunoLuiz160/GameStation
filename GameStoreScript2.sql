@@ -166,7 +166,8 @@ WHERE
 
 
 -- script 1
-
+Objetivo: mostrar os jogos cadastrados, seus preços e os nomes das desenvolvedoras responsáveis.
+    
 USE GameStation;
 
 SELECT
@@ -182,6 +183,7 @@ INNER JOIN Desenvolvedora D
 ORDER BY J.titulo;
 
 -- script 2
+Objetivo: mostrar quais categorias estão associadas a cada jogo.
 
 USE GameStation;
 
@@ -196,6 +198,7 @@ INNER JOIN Categoria C
 ORDER BY C.nome, J.titulo;
 
 -- script 3 
+Objetivo: exibir o catálogo com o nome do jogo, a desenvolvedora, a categoria e o preço.
 
 USE GameStation;
 
@@ -214,6 +217,7 @@ INNER JOIN Categoria C
 ORDER BY J.titulo, C.nome;
 
 -- script 4
+Objetivo: descobrir quantos jogos estão associados a cada categoria.
 
 USE GameStation;
 
@@ -227,6 +231,7 @@ GROUP BY C.id_categoria, C.nome
 ORDER BY quantidade_jogos DESC, C.nome;
 
 -- script 5
+Objetivo: calcular o preço médio dos jogos de cada desenvolvedora.
 
 USE GameStation;
 
@@ -242,6 +247,7 @@ HAVING COUNT(J.id_jogo) >= 1
 ORDER BY preco_medio DESC;
 
 -- script 6
+Objetivo: pesquisar jogos com critérios específicos.
 
 USE GameStation;
 
@@ -256,6 +262,8 @@ WHERE titulo LIKE '%The%'
 ORDER BY titulo;
 
 -- script 7
+Objetivo: modificar o preço de um jogo já cadastrado.
+
 USE GameStation;
 
 SELECT titulo, preco
@@ -271,6 +279,8 @@ FROM Jogo
 WHERE titulo = 'Stardew Valley';
 
 -- Script 8
+Objetivo: excluir a associação entre Minecraft e a categoria Construcao.
+
 USE GameStation;
 
 SELECT
@@ -303,6 +313,7 @@ INNER JOIN Categoria C
 WHERE J.titulo = 'Minecraft';
 
 -- script 9 
+Objetivo: criar uma View chamada vw_painel_executivo.
 
 USE GameStation;
 
@@ -331,6 +342,7 @@ SELECT
         
         
 -- script 10
+Objetivo: exibir os indicadores calculados pela View criada no script anterior.
 
 USE GameStation;
 
