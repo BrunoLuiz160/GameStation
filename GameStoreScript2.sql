@@ -1,3 +1,27 @@
+"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
+
+
+
+USE GameStation;
+
+INSERT INTO Usuario (nome, email, senha)
+VALUES
+('Joao Silva', 'joao.silva@example.com', 'senha_hash_001'),
+('Maria Oliveira', 'maria.oliveira@example.com', 'senha_hash_002'),
+('Pedro Santos', 'pedro.santos@example.com', 'senha_hash_003'),
+('Ana Costa', 'ana.costa@example.com', 'senha_hash_004'),
+('Lucas Ferreira', 'lucas.ferreira@example.com', 'senha_hash_005'),
+('Julia Almeida', 'julia.almeida@example.com', 'senha_hash_006'),
+('Gabriel Souza', 'gabriel.souza@example.com', 'senha_hash_007'),
+('Beatriz Lima', 'beatriz.lima@example.com', 'senha_hash_008'),
+('Rafael Gomes', 'rafael.gomes@example.com', 'senha_hash_009'),
+('Camila Rodrigues', 'camila.rodrigues@example.com', 'senha_hash_010');
+
+SELECT id_usuario, nome, email, data_cadastro
+FROM Usuario
+ORDER BY id_usuario;
+
+
 
 USE GameStation;
 
